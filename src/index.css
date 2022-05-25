@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 body{
     margin: 0;
     padding:0;
     font-family: 'Source Sans Pro', sans-serif;
+    /* Layout Properties */
+top: 0px;
+left: 0px;
+/* width: 1280px; */
+/* height: 923px; */
+/* UI Properties */
+background: #F7F7F7 0% 0% no-repeat padding-box;
+opacity: 1;
 }
 
 @tailwind base;
