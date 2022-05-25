@@ -29,7 +29,7 @@ const App = () => {
               <Sidebar />
             </div>
           ) : (
-            <div className='sidebar bg-white' style={{width: '85px'}}>
+            <div className='sidebar bg-white' style={{width: '100px'}}>
               <Sidebar />
             </div>
           )}
