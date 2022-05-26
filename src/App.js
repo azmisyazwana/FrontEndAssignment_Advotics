@@ -33,14 +33,10 @@ const App = () => {
               <Sidebar />
             </div>
           )}
-          {/* navbar
+          {/* navbar */}
           <div className={
-            `bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`
+            `bg-main-bg min-h-screen w-full ${activeMenu ? '' : 'flex-2'}`
           }>
-            <div className="fixed md:static bg-main-bg navbar w-full">
-              <Navbar />
-            </div>
-          </div> */}
           {/* routing */}
           <div>
             <Routes>
@@ -48,6 +44,7 @@ const App = () => {
               <Route path="/" element={<Dashboard />} />
               {/* <Route path="/" element="Dashbaord"/> */}
             </Routes>
+          </div>
           </div>
         </div>
       </BrowserRouter>

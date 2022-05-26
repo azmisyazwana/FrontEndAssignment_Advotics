@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
         </TooltipComponent>
         {isClicked.userProfile && <UserProfile />}
-        <NavButton title="Logout" icon={<MdOutlineLogout />} />
+        <NavButton color='text-gray-400' title="Logout" icon={<MdOutlineLogout />} />
       </div>
     </div>
   )

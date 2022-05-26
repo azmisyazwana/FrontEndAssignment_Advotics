@@ -16,6 +16,7 @@ module.exports = {
           'secondary-dark-bg': '#33373E',
           'light-gray': '#F7F7F7',
           'half-transparent': 'rgba(0, 0, 0, 0.5)',
+          'market-insight': '#37B04C'
         },
         borderWidth: {
           1: '1px',
@@ -34,6 +35,7 @@ module.exports = {
         },
         height: {
           80: '80px',
+          48: '48px'
         },
         minHeight: {
           590: '590px',
