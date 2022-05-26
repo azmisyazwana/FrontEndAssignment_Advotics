@@ -11,7 +11,7 @@ import Calendar from '../components/Calendar';
 const Dashboard = () => {
 
   return (
-    <div className='mt-12'>
+    <div className='mt-5'>
       <Calendar />
       <div className='flex flex-wrap lg:flex-nowrap justify-center '>
         <div className='flex box-border h-48 w-full p-2 mr-10 ml-10 mb-3 mt-3 bg-market-insight items-center justify-between'>

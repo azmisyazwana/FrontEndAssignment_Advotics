@@ -52,3 +52,12 @@
     right: 10px;
     padding: 5px 7px;
 }
+
+.period-filter{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 3px #00000029;
+border-radius: 2px;
+opacity: 1;
+box-sizing: border-box;
+padding: 10px 20px;
+}

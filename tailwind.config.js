@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         display: ['Source Sans Pro', 'sans-serif'],
         body: ['Source Sans Pro', 'sans-serif'],
+        openSans: ['Open Sans', 'sans-serif']
       },
       extend: {
         fontSize: {

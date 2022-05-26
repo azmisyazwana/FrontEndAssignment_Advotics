@@ -6,6 +6,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 import "./Calendar.css";
 import { AiOutlineClose } from 'react-icons/ai'
 import calendarImage from '../data/calendar.png'
+import {IoIosArrowUp} from 'react-icons/io'
 
 
 const Calendar = () => {
@@ -145,8 +146,29 @@ if(activeCalendar) {
 
   return (
     <div className="flex">
-        <div>
+        <div className="flex ml-10 mr-10 mb-3 w-full justify-between items-center">
+            <div className="text-3xl text-gray-400">
+                <h1>Dashboard</h1>
+            </div>
+            <div className="flex gap-3 period-filter items-center cursor-pointer" onClick={() => setActiveCalendar(true)}>
+                <div>
+                    <img src={calendarImage} alt="" />
+                </div>
+                <h2 className="font-display">Period</h2>
                 <p>
+                {dateApply[0].startDate.getDate().toString()}{" "}
+                {convertMonth(dateApply[0].startDate.getMonth())}{" "}
+                {dateApply[0].startDate.getFullYear().toString()}
+                </p>
+                <span>-</span>
+                <p>
+                {dateApply[0].endDate.getDate().toString()}{" "}
+                {convertMonth(dateApply[0].endDate.getMonth())}{" "}
+                {dateApply[0].endDate.getFullYear().toString()}
+                </p>
+                <IoIosArrowUp />
+            </div>
+                {/* <p>
                 {dateApply[0].startDate.getDate().toString()}{" "}
                 {convertMonth(dateApply[0].startDate.getMonth())}{" "}
                 {dateApply[0].startDate.getFullYear().toString()}
@@ -155,7 +177,7 @@ if(activeCalendar) {
                 {dateApply[0].endDate.getDate().toString()}{" "}
                 {convertMonth(dateApply[0].endDate.getMonth())}{" "}
                 {dateApply[0].endDate.getFullYear().toString()}
-                </p>
+                </p> */}
             </div>
             <div className="relative right-0">
             {
@@ -170,7 +192,6 @@ if(activeCalendar) {
                               </div>
                               <div>
                                   <h1>Period</h1>
-
                               </div>
                           </div>
                           <div>
