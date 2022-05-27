@@ -32,6 +32,11 @@
     position: fixed;
 }
 
+.modal{
+    z-index: 1000;
+
+}
+
 .overlay {
     background: rgba(49,49,49,0.8);
 }
@@ -60,4 +65,9 @@ border-radius: 2px;
 opacity: 1;
 box-sizing: border-box;
 padding: 10px 20px;
+}
+
+#Chart{
+    position: relative;
+    z-index: 0;
 }
