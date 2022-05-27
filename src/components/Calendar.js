@@ -127,14 +127,16 @@ const Calendar = () => {
   let calendar = useRef()
 
   useEffect(() => {
-      let handler = (event) => {
-          if(!calendar.current.contains(event.target)){
-              setActiveCalendar(false);
-          }
-      };
-      document.addEventListener("mousedown", handler)
-      return () => {
-          document.removeEventListener("mousedown", handler)
+    if(activeCalendar) {
+        let handler = (event) => {
+            if(!calendar.current.contains(event.target)){
+                setActiveCalendar(false);
+            }
+        };
+        document.addEventListener("mousedown", handler)
+        return () => {
+            document.removeEventListener("mousedown", handler)
+        }
       }
   })
 if(activeCalendar) {
@@ -147,10 +149,10 @@ if(activeCalendar) {
   return (
     <div className="flex">
         <div className="flex ml-10 mr-10 mb-3 w-full justify-between items-center">
-            <div className="text-3xl text-gray-400">
+            <div className="text-3xl text-gray-400 font-semibold">
                 <h1>Dashboard</h1>
             </div>
-            <div className="flex gap-3 period-filter items-center cursor-pointer" onClick={() => setActiveCalendar(true)}>
+            <div className="flex gap-3 period-filter items-center cursor-pointer font-normal" onClick={() => setActiveCalendar(true)}>
                 <div>
                     <img src={calendarImage} alt="" />
                 </div>

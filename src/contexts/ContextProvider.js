@@ -14,12 +14,44 @@ const initialFilter = {
     custom: false
 }
 
+const initialProductLeft = {
+    product1: true,
+    product2: false,
+    product3: false,
+    product4: false,
+    product5: false,
+}
+const clickProductLeft = {
+    product1: false,
+    product2: false,
+    product3: false,
+    product4: false,
+    product5: false,
+}
+const initialProductRight = {
+    product1: true,
+    product2: false,
+    product3: false,
+    product4: false,
+    product5: false,
+}
+const clickProductRight = {
+    product1: false,
+    product2: false,
+    product3: false,
+    product4: false,
+    product5: false,
+}
+
 export const ContextProvider = ({children}) => {
     const [activeMenu, setActiveMenu] = useState(false);
     const [isClicked, setIsClicked] = useState(initialState)
     const [activeFilter, setActiveFilter] = useState(false);
     const [isClickedFilter, setIsClickedFilter] = useState(initialFilter)
-    const [activeCalendar, setActiveCalendar] = useState(true)
+    const [activeCalendar, setActiveCalendar] = useState(false)
+    const [isClickedProductLeft, setIsClickedProductLeft] = useState(initialProductLeft)
+    const [isClickedProductRight, setIsClickedProductRight] = useState(initialProductRight)
+
 
 
     
@@ -29,6 +61,12 @@ export const ContextProvider = ({children}) => {
 
     const handleClickFilter = (clicked) => {
         setIsClickedFilter({...initialFilter, [clicked]: true})
+    }
+    const handleClickProductLeft = (clicked) => {
+        setIsClickedProductLeft({...clickProductLeft, [clicked]: true})
+    }
+    const handleClickProductRight = (clicked) => {
+        setIsClickedProductRight({...clickProductRight, [clicked]: true})
     }
 
 
@@ -45,7 +83,13 @@ export const ContextProvider = ({children}) => {
             isClickedFilter: isClickedFilter,
             setIsClickedFilter: setIsClickedFilter,
             activeCalendar,
-            setActiveCalendar
+            setActiveCalendar,
+            isClickedProductLeft,
+            setIsClickedProductLeft,
+            handleClickProductLeft,
+            isClickedProductRight,
+            setIsClickedProductRight,
+            handleClickProductRight
          }}>
             {children}
         </StateContext.Provider>

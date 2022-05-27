@@ -17,7 +17,8 @@ module.exports = {
           'secondary-dark-bg': '#33373E',
           'light-gray': '#F7F7F7',
           'half-transparent': 'rgba(0, 0, 0, 0.5)',
-          'market-insight': '#37B04C'
+          'market-insight': '#37B04C',
+          'product-active': '#FFE7BD'
         },
         borderWidth: {
           1: '1px',
@@ -26,6 +27,12 @@ module.exports = {
           color: 'rgba(0, 0, 0, 0.1)',
         },
         width: {
+          80: '80px',
+          60: '60px',
+          165: '165px',
+          243: '243px',
+          275: '275px',
+          276: '276px',
           400: '400px',
           760: '760px',
           780: '780px',
@@ -35,8 +42,10 @@ module.exports = {
           1400: '1400px',
         },
         height: {
+          60: '60px',
           80: '80px',
-          48: '48px'
+          48: '48px',
+          104: '104px'
         },
         minHeight: {
           590: '590px',

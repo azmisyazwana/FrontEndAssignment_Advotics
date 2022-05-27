@@ -474,8 +474,8 @@ export const links = [
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        name: 'Dashboard',
+        icon: <AiOutlineBarChart />,
       },
     ],
   },
@@ -497,65 +497,65 @@ export const links = [
       },
     ],
   },
-  {
-    title: 'Apps',
-    links: [
-      {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
-      },
-      {
-        name: 'kanban',
-        icon: <BsKanban />,
-      },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
-    ],
-  },
-  {
-    title: 'Charts',
-    links: [
-      {
-        name: 'line',
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
+  // {
+  //   title: 'Apps',
+  //   links: [
+  //     {
+  //       name: 'calendar',
+  //       icon: <AiOutlineCalendar />,
+  //     },
+  //     {
+  //       name: 'kanban',
+  //       icon: <BsKanban />,
+  //     },
+  //     {
+  //       name: 'editor',
+  //       icon: <FiEdit />,
+  //     },
+  //     {
+  //       name: 'color-picker',
+  //       icon: <BiColorFill />,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'Charts',
+  //   links: [
+  //     {
+  //       name: 'line',
+  //       icon: <AiOutlineStock />,
+  //     },
+  //     {
+  //       name: 'area',
+  //       icon: <AiOutlineAreaChart />,
+  //     },
 
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
-    ],
-  },
+  //     {
+  //       name: 'bar',
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //     {
+  //       name: 'pie',
+  //       icon: <FiPieChart />,
+  //     },
+  //     {
+  //       name: 'financial',
+  //       icon: <RiStockLine />,
+  //     },
+  //     {
+  //       name: 'color-mapping',
+  //       icon: <BsBarChart />,
+  //     },
+  //     {
+  //       name: 'pyramid',
+  //       icon: <GiLouvrePyramid />,
+  //     },
+  //     {
+  //       name: 'stacked',
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //   ],
+  // },
 ];
 
 export const cartData = [
@@ -3175,6 +3175,18 @@ export const stackedChartData = [
   ],
 ];
 
+export const stackedLineData = [
+  [
+    { x: 'Jan', y: 111.1 },
+    { x: 'Feb', y: 127.3 },
+    { x: 'Mar', y: 143.4 },
+    { x: 'Apr', y: 159.9 },
+    { x: 'May', y: 159.9 },
+    { x: 'Jun', y: 159.9 },
+    { x: 'July', y: 159.9 },
+  ]
+];
+
 export const stackedCustomSeries = [
 
   { dataSource: stackedChartData[0],
@@ -3194,6 +3206,22 @@ export const stackedCustomSeries = [
     background: 'red',
 
   },
+  {
+    type: 'Line',
+    dataSource: stackedLineData[0],
+    xName: 'x',
+    yName: 'y1',
+    name: 'Line',
+    opacity: '0.6', 
+    background: '#9CD9FF',
+    width: 2,
+    marker: {
+      visible: true,
+      width: 10,
+      height: 10,
+      opacity: 0.6
+  }
+  }
 
 ];
 
